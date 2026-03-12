@@ -113,4 +113,7 @@ CONFIG_USE_APK=n
 # 科学插件
 CONFIG_PACKAGE_luci-app-openclash=y
 CONFIG_PACKAGE_clash-meta=y
-
+#oaf
+CONFIG_PACKAGE_luci-app-oaf=y
+CONFIG_PACKAGE_oaf=y
+CONFIG_PACKAGE_open-app-filter=y
