@@ -120,5 +120,5 @@ CONFIG_PACKAGE_oaf=y
 CONFIG_PACKAGE_open-app-filter=y
 #
 CONFIG_PACKAGE_luci-app-diskman=y
-CONFIG_PACKAGE_luci-app-ddns-go=y
+#CONFIG_PACKAGE_luci-app-ddns-go=y
 CONFIG_PACKAGE_luci-app-openlist2=y
