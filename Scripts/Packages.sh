@@ -77,6 +77,35 @@ UPDATE_PACKAGE "quickfile" "sbwml/luci-app-quickfile" "main"
 UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "luci-app-timewol luci-app-wolplus"
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 
+# ===== 自定义插件（额外增加） =====
+
+# AdGuardHome LuCI界面
+UPDATE_PACKAGE "adguardhome" "sbwml/luci-app-adguardhome" "main"
+
+# Lucky（内网穿透 / 工具箱）
+UPDATE_PACKAGE "lucky" "gdy666/luci-app-lucky" "main"
+
+# TurboACC（网络加速）
+UPDATE_PACKAGE "turboacc" "chenmozhijin/luci-app-turboacc" "master"
+
+# WeChatPush（微信推送）
+UPDATE_PACKAGE "wechatpush" "tty228/luci-app-wechatpush" "master"
+
+# 带宽统计
+UPDATE_PACKAGE "nlbwmon" "sirpdboy/luci-app-nlbwmon" "main"
+
+# 定时重启
+UPDATE_PACKAGE "timedreboot" "sirpdboy/luci-app-timedreboot" "main"
+
+# WebDAV
+UPDATE_PACKAGE "webdav" "linkease/nas-packages-luci" "master" "pkg"
+
+# 带宽控制
+UPDATE_PACKAGE "bandix" "sirpdboy/luci-app-bandix" "main"
+
+# IP/MAC绑定
+UPDATE_PACKAGE "arpbind" "sirpdboy/luci-app-arpbind" "main"
+
 #更新软件包版本
 UPDATE_VERSION() {
 	local PKG_NAME=$1
