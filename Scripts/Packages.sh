@@ -124,7 +124,7 @@ UPDATE_PACKAGE "luci-app-adguardhome" "sirpdboy/luci-app-adguardhome" "main"
 UPDATE_PACKAGE "luci-app-turboacc" "chenmozhijin/luci-app-turboacc" "master"
 
 # ARP绑定
-UPDATE_PACKAGE "luci-app-arpbind" "seassrs/luci-app-arpbind" "master"
+UPDATE_PACKAGE "luci-app-arpbind" "seassrs/luci-app-arpbind" "main"
 
 # 网络测速 + Homebox
 UPDATE_PACKAGE "netspeedtest" "sirpdboy/netspeedtest" "main" "pkg" "homebox speedtest"
