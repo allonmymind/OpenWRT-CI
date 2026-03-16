@@ -86,22 +86,19 @@ UPDATE_PACKAGE "adguardhome" "sbwml/luci-app-adguardhome" "main"
 UPDATE_PACKAGE "lucky" "gdy666/luci-app-lucky" "main"
 
 # TurboACC（网络加速）
-UPDATE_PACKAGE "turboacc" "chenmozhijin/luci-app-turboacc" "master"
+UPDATE_PACKAGE "luci-app-turboacc" "chenmozhijin/luci-app-turboacc" "master"
 
 # WeChatPush（微信推送）
 UPDATE_PACKAGE "wechatpush" "tty228/luci-app-wechatpush" "master"
 
 # 带宽统计
-UPDATE_PACKAGE "nlbwmon" "sirpdboy/luci-app-nlbwmon" "main"
+UPDATE_PACKAGE "luci-app-nlbwmon" "sirpdboy/luci-app-nlbwmon" "main"
 
 # 定时重启
 #UPDATE_PACKAGE "timedreboot" "sirpdboy/luci-app-timedreboot" "main"
 
 # WebDAV
-UPDATE_PACKAGE "webdav" "linkease/nas-packages-luci" "master" "pkg"
-
-# 带宽控制
-UPDATE_PACKAGE "bandix" "sirpdboy/luci-app-bandix" "main"
+UPDATE_PACKAGE "luci-app-webdav" "linkease/nas-packages-luci" "master" "pkg"
 
 # IP/MAC绑定
 UPDATE_PACKAGE "arpbind" "sirpdboy/luci-app-arpbind" "main"
