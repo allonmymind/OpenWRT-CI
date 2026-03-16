@@ -95,7 +95,7 @@ UPDATE_PACKAGE "wechatpush" "tty228/luci-app-wechatpush" "master"
 UPDATE_PACKAGE "nlbwmon" "sirpdboy/luci-app-nlbwmon" "main"
 
 # 定时重启
-UPDATE_PACKAGE "timedreboot" "sirpdboy/luci-app-timedreboot" "main"
+#UPDATE_PACKAGE "timedreboot" "sirpdboy/luci-app-timedreboot" "main"
 
 # WebDAV
 UPDATE_PACKAGE "webdav" "linkease/nas-packages-luci" "master" "pkg"
