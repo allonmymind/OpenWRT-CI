@@ -132,8 +132,8 @@ UPDATE_PACKAGE "netspeedtest" "sirpdboy/netspeedtest" "main" "pkg" "homebox spee
 # Unishare
 UPDATE_PACKAGE "unishare" "linkease/nas-packages-luci" "main" "pkg"
 
-# CPU频率
-UPDATE_PACKAGE "cpufreq" "pppoex/openwrt-packages" "master" "pkg"
+# CPU频率控制
+UPDATE_PACKAGE "luci-app-cpufreq" "pppoex/openwrt-packages" "master" "pkg"
 
 # 定时重启（需要可开启）
 # UPDATE_PACKAGE "timedreboot" "sirpdboy/luci-app-timedreboot" "main"
