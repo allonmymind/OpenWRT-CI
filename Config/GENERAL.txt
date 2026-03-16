@@ -134,7 +134,24 @@ CONFIG_PACKAGE_luci-app-lucky=y
 CONFIG_PACKAGE_luci-app-nlbwmon=y
 CONFIG_PACKAGE_luci-app-wechatpush=y
 #CONFIG_PACKAGE_luci-app-timedreboot=y
-CONFIG_PACKAGE_luci-app-timewol=y
+#CONFIG_PACKAGE_luci-app-timewol=y
 CONFIG_PACKAGE_luci-app-turboacc=y
 CONFIG_PACKAGE_luci-app-webdav=y
+
+# ===== Docker =====
+CONFIG_PACKAGE_docker=y
+CONFIG_PACKAGE_dockerd=y
+CONFIG_PACKAGE_containerd=y
+CONFIG_PACKAGE_luci-app-docker=y
+
+# Docker network
+CONFIG_PACKAGE_kmod-macvlan=y
+CONFIG_PACKAGE_kmod-br-netfilter=y
+CONFIG_PACKAGE_kmod-nf-nat=y
+CONFIG_PACKAGE_kmod-ipt-nat=y
+CONFIG_PACKAGE_kmod-ipt-conntrack=y
+
+# Docker storage
+CONFIG_PACKAGE_kmod-fs-overlay=y
+CONFIG_PACKAGE_kmod-fs-ext4=y
 
