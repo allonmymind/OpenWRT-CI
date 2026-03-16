@@ -78,30 +78,32 @@ UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "luci-app-timewol luci-ap
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 
 # ===== 自定义插件（额外增加） =====
-
-# AdGuardHome LuCI界面
-UPDATE_PACKAGE "adguardhome" "sbwml/luci-app-adguardhome" "main"
-
 # Lucky（内网穿透 / 工具箱）
 UPDATE_PACKAGE "lucky" "gdy666/luci-app-lucky" "main"
-
-# TurboACC（网络加速）
-UPDATE_PACKAGE "luci-app-turboacc" "chenmozhijin/luci-app-turboacc" "master"
-
 # WeChatPush（微信推送）
 UPDATE_PACKAGE "wechatpush" "tty228/luci-app-wechatpush" "master"
-
-# 带宽统计
-UPDATE_PACKAGE "luci-app-nlbwmon" "sirpdboy/luci-app-nlbwmon" "main"
-
+# ===== 网络管理插件 =====
+# 带宽控制
+UPDATE_PACKAGE "luci-app-bandix" "timsaya/luci-app-bandix" "main" "pkg"
+# WebDAV
+UPDATE_PACKAGE "luci-app-webdav" "sbwml/luci-app-webdav" "master"
+# AdGuardHome DNS
+UPDATE_PACKAGE "luci-app-adguardhome" "sirpdboy/luci-app-adguardhome" "main"
+# TurboACC（网络加速）
+UPDATE_PACKAGE "luci-app-turboacc" "chenmozhijin/luci-app-turboacc" "master"
+# IP/MAC 绑定
+UPDATE_PACKAGE "luci-app-arpbind" "seassrs/luci-app-arpbind" "main"
+# 网络测速
+UPDATE_PACKAGE "netspeedtest" "sirpdboy/netspeedtest" "main" "pkg" "homebox speedtest"
+# Unishare 局域网文件分享
+UPDATE_PACKAGE "unishare" "linkease/nas-packages-luci" "main" "pkg"
+# CPU频率控制
+UPDATE_PACKAGE "cpufreq" "pppoex/openwrt-packages" "master" "pkg"
 # 定时重启
 #UPDATE_PACKAGE "timedreboot" "sirpdboy/luci-app-timedreboot" "main"
 
-# WebDAV
-UPDATE_PACKAGE "luci-app-webdav" "linkease/nas-packages-luci" "master" "pkg"
 
-# IP/MAC绑定
-UPDATE_PACKAGE "arpbind" "sirpdboy/luci-app-arpbind" "main"
+
 
 #更新软件包版本
 UPDATE_VERSION() {
