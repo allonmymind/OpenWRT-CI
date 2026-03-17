@@ -127,10 +127,10 @@ UPDATE_PACKAGE "luci-app-turboacc" "chenmozhijin/luci-app-turboacc" "master"
 UPDATE_PACKAGE "luci-app-arpbind" "seassrs/luci-app-arpbind" "main"
 
 # 网络测速 + Homebox
-UPDATE_PACKAGE "netspeedtest" "sirpdboy/netspeedtest" "main" "pkg" "homebox speedtest"
+UPDATE_PACKAGE "netspeedtest" "sirpdboy/netspeedtest" "main" "pkg" "homebox"
 
 # Unishare
-UPDATE_PACKAGE "unishare" "linkease/nas-packages-luci" "main" "pkg"
+#UPDATE_PACKAGE "unishare" "linkease/nas-packages-luci" "main" "pkg"
 
 # CPU频率控制
 UPDATE_PACKAGE "luci-app-cpufreq" "pppoex/openwrt-packages" "master" "pkg"
