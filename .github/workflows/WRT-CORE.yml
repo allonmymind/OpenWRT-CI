@@ -148,9 +148,15 @@ jobs:
       - name: Update Feeds
         run: |
           cd ./wrt/
+          # 添加额外 feeds 源
+          if ! grep -q "lienol" feeds.conf.default 2>/dev/null; then
+            echo "src-git lienol https://github.com/Lienol/openwrt-package.git" >> feeds.conf.default
+          fi
 
           ./scripts/feeds update -a
           ./scripts/feeds install -a
+          # 安装额外依赖
+          ./scripts/feeds install unishare homebox ookla-speedtest 2>/dev/null || true
 
       - name: Custom Packages
         run: |
