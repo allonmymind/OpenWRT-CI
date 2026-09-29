@@ -74,7 +74,7 @@ UPDATE_PACKAGE "qbittorrent" "sbwml/luci-app-qbittorrent" "master" "" "qt6base q
 UPDATE_PACKAGE "quickfile" "sbwml/luci-app-quickfile" "main"
 
 UPDATE_PACKAGE "ddns-go" "sirpdboy/luci-app-ddns-go" "main"
-UPDATE_PACKAGE "netspeedtest" "sirpdboy/netspeedtest" "main" "" "homebox ookla-speedtest"
+#UPDATE_PACKAGE "netspeedtest" "sirpdboy/netspeedtest" "main" "" "homebox ookla-speedtest"
 UPDATE_PACKAGE "netwizard" "sirpdboy/luci-app-netwizard" "main"
 UPDATE_PACKAGE "partexp" "sirpdboy/luci-app-partexp" "main"
 UPDATE_PACKAGE "timecontrol" "sirpdboy/luci-app-timecontrol" "main"
@@ -91,6 +91,45 @@ UPDATE_PACKAGE "mt5700" "LianXia233/luci-app-mt5700" "main"
 UPDATE_PACKAGE "mt5700m" "LianXia233/luci-app-mt5700m" "main"
 UPDATE_PACKAGE "netmonitor" "LianXia233/luci-app-netmonitor" "main"
 UPDATE_PACKAGE "qmodem-generic" "LianXia233/luci-app-qmodem-generic" "main"
+
+# ==============================
+# 自定义插件
+# ==============================
+
+# Lucky
+UPDATE_PACKAGE "lucky" "gdy666/luci-app-lucky" "main"
+
+# 微信推送
+UPDATE_PACKAGE "wechatpush" "tty228/luci-app-wechatpush" "master"
+
+# 带宽控制
+UPDATE_PACKAGE "luci-app-bandix" "timsaya/luci-app-bandix" "main" "pkg"
+
+# WebDAV
+UPDATE_PACKAGE "luci-app-webdav" "sbwml/luci-app-webdav" "master"
+
+# AdGuardHome
+UPDATE_PACKAGE "luci-app-adguardhome" "sirpdboy/luci-app-adguardhome" "main"
+
+# TurboACC
+UPDATE_PACKAGE "luci-app-turboacc" "chenmozhijin/luci-app-turboacc" "master"
+
+# ARP绑定
+UPDATE_PACKAGE "luci-app-arpbind" "seassrs/luci-app-arpbind" "main"
+
+# 网络测速 + Homebox
+UPDATE_PACKAGE "netspeedtest" "sirpdboy/netspeedtest" "main" "pkg" "homebox"
+
+# Unishare
+#UPDATE_PACKAGE "unishare" "linkease/nas-packages-luci" "main" "pkg"
+
+# CPU频率控制
+UPDATE_PACKAGE "luci-app-cpufreq" "pppoex/openwrt-packages" "master" "pkg"
+
+# 定时重启（需要可开启）
+# UPDATE_PACKAGE "timedreboot" "sirpdboy/luci-app-timedreboot" "main"
+
+
 
 #更新软件包版本
 UPDATE_VERSION() {
