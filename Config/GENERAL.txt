@@ -122,6 +122,5 @@ CONFIG_PACKAGE_usbutils=y
 CONFIG_PACKAGE_xz-utils=y
 CONFIG_USE_APK=n
 # oaf
-CONFIG_PACKAGE_luci-app-oaf=y
-CONFIG_PACKAGE_oaf=y
-CONFIG_PACKAGE_open-app-filter=y
+CONFIG_PACKAGE_luci-app-appfilter=y
+CONFIG_PACKAGE_kmod-appfilter=y
