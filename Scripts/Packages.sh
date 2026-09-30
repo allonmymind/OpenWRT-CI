@@ -47,6 +47,8 @@ UPDATE_PACKAGE() {
 
 # 确保正确拉取最新标准的 OpenAppFilter 源码，并清理掉可能冲突的旧包
 UPDATE_PACKAGE "open-app-filter" "destan19/OpenAppFilter" "master" "" "luci-app-appfilter oaf luci-app-oaf"
+# Lucky
+UPDATE_PACKAGE "lucky" "gdy666/luci-app-lucky" "main"
 
 # UPDATE_PACKAGE "包名" "项目地址" "项目分支" "pkg，可选，从大杂烩中单独提取包名插件"
 UPDATE_PACKAGE "argon" "sbwml/luci-theme-argon" "openwrt-25.12"
