@@ -125,3 +125,8 @@ CONFIG_USE_APK=n
 CONFIG_PACKAGE_luci-app-oaf=y
 CONFIG_PACKAGE_oaf=y
 CONFIG_PACKAGE_open-app-filter=y
+# 科学插件
+CONFIG_PACKAGE_luci-app-openclash=y
+CONFIG_PACKAGE_clash-meta=y
+CONFIG_PACKAGE_ipset=y
+CONFIG_PACKAGE_kmod-nft-tproxy=y
