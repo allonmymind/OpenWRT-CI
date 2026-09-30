@@ -51,6 +51,12 @@ UPDATE_PACKAGE "open-app-filter" "destan19/OpenAppFilter" "master" "" "luci-app-
 UPDATE_PACKAGE "lucky" "gdy666/luci-app-lucky" "main"
 # 单独拉取 homebox（如果它是作为子目录存在于 sirpdboy/netspeedtest 中，可以使用 pkg 模式单独提取）
 UPDATE_PACKAGE "homebox" "sirpdboy/netspeedtest" "main" "pkg"
+# 拉取 frp 底层二进制文件（来自 laipeng668/packages 的 frp-binary 分支）
+UPDATE_PACKAGE "frp" "laipeng668/packages" "frp-binary"
+
+# 拉取 frpc 和 frps 的 LuCI 界面（来自 laipeng668/luci 的 frp 分支，通过 pkg 模式精准提取）
+UPDATE_PACKAGE "luci-app-frpc" "laipeng668/luci" "frp" "pkg"
+UPDATE_PACKAGE "luci-app-frps" "laipeng668/luci" "frp" "pkg"
 
 # UPDATE_PACKAGE "包名" "项目地址" "项目分支" "pkg，可选，从大杂烩中单独提取包名插件"
 UPDATE_PACKAGE "argon" "sbwml/luci-theme-argon" "openwrt-25.12"
