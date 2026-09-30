@@ -50,7 +50,8 @@ UPDATE_PACKAGE "open-app-filter" "destan19/OpenAppFilter" "master" "" "luci-app-
 # Lucky
 UPDATE_PACKAGE "lucky" "gdy666/luci-app-lucky" "main"
 # 单独拉取 homebox（如果它是作为子目录存在于 sirpdboy/netspeedtest 中，可以使用 pkg 模式单独提取）
-UPDATE_PACKAGE "homebox" "sirpdboy/netspeedtest" "main" "pkg"
+#UPDATE_PACKAGE "homebox" "sirpdboy/netspeedtest" "main" "pkg"
+UPDATE_PACKAGE "homebox" "selfcan/luci-app-homebox" "main"
 
 # 拉取 frp 底层二进制与核心（来自 laipeng668/packages 的 frp-binary 分支）
 UPDATE_PACKAGE "frp" "laipeng668/packages" "frp-binary"
