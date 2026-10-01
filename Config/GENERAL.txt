@@ -126,15 +126,14 @@ CONFIG_PACKAGE_luci-app-oaf=y
 CONFIG_PACKAGE_luci-i18n-appfilter-zh-cn=y
 CONFIG_PACKAGE_appfilter=y
 CONFIG_PACKAGE_kmod-oaf=y
-# ===== 网络测速 =====
-#CONFIG_PACKAGE_luci-app-netspeedtest=y
-CONFIG_PACKAGE_luci-app-homebox=y
+===== Homebox =====
 CONFIG_PACKAGE_homebox=y
-#CONFIG_PACKAGE_ookla-speedtest=y
-
 #lucky
 CONFIG_PACKAGE_luci-app-lucky=n
 CONFIG_PACKAGE_luci-app-ddns-go=y
 CONFIG_PACKAGE_luci-app-openclash=y
+===== FRP =====
+CONFIG_PACKAGE_frpc=y
+CONFIG_PACKAGE_frps=y
 CONFIG_PACKAGE_luci-app-frpc=y
-CONFIG_PACKAGE_luci-app-frps=n
+CONFIG_PACKAGE_luci-app-frps=y
