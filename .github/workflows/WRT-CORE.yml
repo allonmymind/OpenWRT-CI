@@ -171,6 +171,22 @@ jobs:
           $GITHUB_WORKSPACE/Scripts/Packages.sh
           $GITHUB_WORKSPACE/Scripts/Handles.sh
 
+          echo "========================================"
+          echo "CUSTOM PACKAGE CHECK"
+          echo "========================================"
+
+          echo "--- Homebox ---"
+          find ./package -type f -name Makefile 2>/dev/null | grep -Ei 'homebox' || true
+          grep -RHE '^define Package/' ./package 2>/dev/null | grep -Ei 'homebox' || true
+
+          echo "--- FRP ---"
+          find ./package -type f -name Makefile 2>/dev/null | grep -Ei 'frp' || true
+          grep -RHE '^define Package/' ./package 2>/dev/null | grep -Ei 'frp' || true
+
+          echo "--- NetSpeedTest ---"
+          find ./package -type f -name Makefile 2>/dev/null | grep -Ei 'netspeedtest|ookla-speedtest' || true
+          grep -RHE '^define Package/' ./package 2>/dev/null | grep -Ei 'netspeedtest|ookla' || true
+
       - name: Custom Settings
         run: |
           cd ./wrt/
@@ -183,8 +199,19 @@ jobs:
 
           $GITHUB_WORKSPACE/Scripts/Settings.sh
 
-          make defconfig -j$(nproc) && make clean -j$(nproc)
+          echo "========================================"
+          echo "BEFORE DEFCONFIG"
+          echo "========================================"
+          grep -Ei 'homebox|frp|frpc|frps|netspeedtest|ookla' .config || true
 
+          make defconfig -j$(nproc)
+
+          echo "========================================"
+          echo "AFTER DEFCONFIG"
+          echo "========================================"
+          grep -Ei 'homebox|frp|frpc|frps|netspeedtest|ookla' .config || true
+
+          make clean -j$(nproc)
       - name: Download Packages
         if: ${{ !inputs.WRT_TEST }}
         run: |
