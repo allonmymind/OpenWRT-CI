@@ -46,7 +46,7 @@ UPDATE_PACKAGE() {
 # UPDATE_PACKAGE "open-app-filter" "destan19/OpenAppFilter" "master" "" "luci-app-appfilter oaf" 这样会把原有的open-app-filter，luci-app-appfilter，oaf相关组件删除，不会出现coremark错误。
 
 # 确保正确拉取最新标准的 OpenAppFilter 源码，并清理掉可能冲突的旧包
-UPDATE_PACKAGE "open-app-filter" "destan19/OpenAppFilter" "oaf-6.1" "pkg" "luci-app-appfilter oaf luci-app-oaf"
+UPDATE_PACKAGE "open-app-filter" "destan19/OpenAppFilter" "oaf-6.1" "" "luci-app-appfilter oaf luci-app-oaf"
 # Lucky
 #UPDATE_PACKAGE "lucky" "gdy666/luci-app-lucky" "main"
 # Homebox
