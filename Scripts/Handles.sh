@@ -43,3 +43,12 @@ FIX "natmapt" "$PACKAGE_PATH/luci-app-natmapt" sed -i "s/network/services/g" \
 #修复Rust编译失败
 FIX "rust" "$FEEDS_PATH/packages/lang/rust" sed -i 's/ci-llvm=true/ci-llvm=false/g' \
 	"$FEEDS_PATH/packages/lang/rust/Makefile"
+
+# ============================================================
+# 全局强制注入 13.6px 紧凑高密度字体与排版优化 (Settings.sh 阶段)
+# ============================================================
+echo "==> 正在全局注入 13.6px 紧凑主题样式..."
+find ./package/feeds/luci/ ./feeds/luci/ ./package/ -type f -name "*.css" | while read -r css_file; do
+    # 在每一个找到的 CSS 文件末尾直接追加最高权重的强制字号覆盖
+    echo -e "\n/* Auto injected compact font */\nhtml { font-size: 13.6px !important; }" >> "$css_file"
+done
