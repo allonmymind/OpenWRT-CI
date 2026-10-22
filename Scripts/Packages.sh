@@ -46,9 +46,6 @@ UPDATE_PACKAGE() {
 # UPDATE_PACKAGE "open-app-filter" "destan19/OpenAppFilter" "master" "" "luci-app-appfilter oaf" 这样会把原有的open-app-filter，luci-app-appfilter，oaf相关组件删除，不会出现coremark错误。
 UPDATE_PACKAGE "netspeedtest" "muink/luci-app-netspeedtest" "master" "" "homebox ookla-speedtest"
 UPDATE_PACKAGE "open-app-filter" "destan19/OpenAppFilter" "oaf-6.1" "" "luci-app-appfilter oaf"
-UPDATE_PACKAGE "frp" "sbwml/openwrt-frp" "main" "" "frpc frps"
-UPDATE_PACKAGE "luci-app-frpc" "sbwml/luci-app-frpc" "main"
-UPDATE_PACKAGE "luci-app-frps" "sbwml/luci-app-frps" "main"
 
 # UPDATE_PACKAGE "包名" "项目地址" "项目分支" "pkg，可选，从大杂烩中单独提取包名插件"
 UPDATE_PACKAGE "argon" "sbwml/luci-theme-argon" "openwrt-25.12"
