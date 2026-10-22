@@ -51,3 +51,12 @@ if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]]; then
 		echo "qualcommax set up nowifi successfully!"
 	fi
 fi
+
+# ============================================================
+# 全局强制注入 13.6px 紧凑高密度字体与排版优化 (Settings.sh 阶段)
+# ============================================================
+echo "==> 正在全局注入 13.6px 紧凑主题样式..."
+find ./package/feeds/luci/ ./feeds/luci/ ./package/ -type f -name "*.css" | while read -r css_file; do
+    # 在每一个找到的 CSS 文件末尾直接追加最高权重的强制字号覆盖
+    echo -e "\n/* Auto injected compact font */\nhtml { font-size: 13.6px !important; }" >> "$css_file"
+done
