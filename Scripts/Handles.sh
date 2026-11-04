@@ -44,3 +44,12 @@ FIX "mini-diskmanager" "$PACKAGE_PATH/luci-app-mini-diskmanager" sed -i "s/servi
 #修改natmapt菜单位置
 FIX "natmapt" "$PACKAGE_PATH/luci-app-natmapt" sed -i "s/network/services/g" \
 	"$PACKAGE_PATH/luci-app-natmapt/root/usr/share/luci/menu.d/luci-app-natmap.json"
+# 全局强制注入 13.6px 紧凑高密度字体与排版优化 (Handles.sh 阶段)
+echo "==> 正在全局注入 13.6px 紧凑主题样式..."
+for d in ./feeds/luci ./package/feeds/luci; do
+	[ -d "$d" ] || continue
+	find "$d" -type f -name "*.css" | while read -r css_file; do
+		grep -q "Auto injected compact font" "$css_file" && continue
+		printf '\n/* Auto injected compact font */\nhtml, body { font-size: 13.6px !important; }\n' >> "$css_file"
+	done
+done
